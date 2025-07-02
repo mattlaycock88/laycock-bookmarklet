@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laycock Creative | Instagram Bookmarklet</title>
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: 'Helvetica Neue', sans-serif;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #00FFCC;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+    a.bookmarklet {
+      display: inline-block;
+      font-size: 1em;
+      padding: 15px 25px;
+      background: #00FFCC;
+      color: #000;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+    }
+    a.bookmarklet:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Laycock Creative</h1>
+  <p>Drag the button below to your bookmarks bar and use it on Instagram posts:</p>
+  <a class="bookmarklet" href="javascript:(function(){var script=document.createElement('script');script.src='https://theus.github.io/instantgram/instantgram.js';document.body.appendChild(script);})();">
+    📥 Save Instagram Media
+  </a>
+  <p style="margin-top: 60px; font-size: 0.9em;">Works only on instagram.com pages. Click it while
