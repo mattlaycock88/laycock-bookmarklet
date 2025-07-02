@@ -3,26 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Laycock Creative | Instagram Bookmarklet</title>
+  <title>Laycock Creative | Instagram Saver</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      background: #111;
-      color: #fff;
-      font-family: 'Helvetica Neue', sans-serif;
+      background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+      color: #fefefe;
+      font-family: 'Outfit', sans-serif;
       text-align: center;
-      padding: 80px 20px;
+      padding: 60px 20px;
+      margin: 0;
     }
     h1 {
-      font-size: 3em;
+      font-size: 3.2em;
       margin-bottom: 10px;
       color: #00FFCC;
     }
     p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
+      font-size: 1.1em;
+      margin-bottom: 20px;
       color: #ccc;
     }
-    a.bookmarklet {
+    .card {
+      background: #181818;
+      border: 1px solid #333;
+      padding: 30px;
+      border-radius: 14px;
+      max-width: 600px;
+      margin: 40px auto;
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+    }
+    a.bookmarklet-button {
       display: inline-block;
       font-size: 1em;
       padding: 15px 25px;
@@ -30,39 +41,52 @@
       color: #000;
       border-radius: 8px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
+      margin-top: 20px;
       transition: transform 0.2s ease;
     }
-    a.bookmarklet:hover {
+    a.bookmarklet-button:hover {
       transform: scale(1.05);
     }
     pre {
-      background: #222;
+      background: #101010;
       color: #0f0;
-      padding: 15px;
+      padding: 20px;
       border-radius: 8px;
-      margin-top: 20px;
+      margin-top: 25px;
       font-size: 0.9em;
       text-align: left;
-      max-width: 90%;
       overflow-x: auto;
-      margin-left: auto;
-      margin-right: auto;
+    }
+    footer {
+      margin-top: 80px;
+      font-size: 0.8em;
+      color: #555;
     }
   </style>
 </head>
 <body>
   <h1>Laycock Creative</h1>
-  <p>To save Instagram posts or stories, copy the bookmarklet code below and create a new bookmark manually:</p>
+  <p><strong>Instagram Media Saver</strong><br>Save any image or video from a post or story.</p>
 
-  <a class="bookmarklet" href="#" onclick="alert('Right-click the code below, copy it, and paste it as a new bookmark!'); return false;">
-    📥 Save Instagram Media Bookmarklet
-  </a>
+  <div class="card">
+    <p>👉 Drag the button below to your bookmarks bar:</p>
 
-  <pre>
+    <a class="bookmarklet-button" href="javascript:(function(){var script=document.createElement('script');script.src='https://theus.github.io/instantgram/instantgram.js';document.body.appendChild(script);})();">
+      📥 Save Instagram Media
+    </a>
+
+    <p style="margin-top: 30px;">Or copy the code manually:</p>
+
+    <pre>
 javascript:(function(){var script=document.createElement('script');script.src='https://theus.github.io/instantgram/instantgram.js';document.body.appendChild(script);})();
-  </pre>
+    </pre>
 
-  <p style="margin-top: 60px; font-size: 0.9em;">Only works on instagram.com. Open a post or story, then click your bookmarklet.</p>
+    <p style="font-size: 0.9em; margin-top: 20px;">✅ Works on instagram.com posts or stories.<br>Click the bookmarklet while viewing a post.</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Laycock Creative — built for the creators.
+  </footer>
 </body>
 </html>
