@@ -36,12 +36,33 @@
     a.bookmarklet:hover {
       transform: scale(1.05);
     }
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-size: 0.9em;
+      text-align: left;
+      max-width: 90%;
+      overflow-x: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
   </style>
 </head>
 <body>
   <h1>Laycock Creative</h1>
-  <p>Drag the button below to your bookmarks bar and use it on Instagram posts:</p>
-  <a class="bookmarklet" href="javascript:(function(){var script=document.createElement('script');script.src='https://theus.github.io/instantgram/instantgram.js';document.body.appendChild(script);})();">
-    📥 Save Instagram Media
+  <p>To save Instagram posts or stories, copy the bookmarklet code below and create a new bookmark manually:</p>
+
+  <a class="bookmarklet" href="#" onclick="alert('Right-click the code below, copy it, and paste it as a new bookmark!'); return false;">
+    📥 Save Instagram Media Bookmarklet
   </a>
-  <p style="margin-top: 60px; font-size: 0.9em;">Works only on instagram.com pages. Click it while
+
+  <pre>
+javascript:(function(){var script=document.createElement('script');script.src='https://theus.github.io/instantgram/instantgram.js';document.body.appendChild(script);})();
+  </pre>
+
+  <p style="margin-top: 60px; font-size: 0.9em;">Only works on instagram.com. Open a post or story, then click your bookmarklet.</p>
+</body>
+</html>
