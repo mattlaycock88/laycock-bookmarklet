@@ -11,7 +11,6 @@
       text-align: center;
       padding: 100px 20px;
     }
-
     a.bookmarklet-button {
       display: inline-block;
       padding: 15px 25px;
@@ -23,28 +22,38 @@
       text-decoration: none;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
-
     a.bookmarklet-button:hover {
       background-color: #1da851;
     }
-
     .instructions {
       margin-top: 40px;
       font-size: 16px;
       color: #aaa;
     }
+    code {
+      background: #222;
+      padding: 10px;
+      display: block;
+      margin: 20px auto;
+      width: fit-content;
+      color: #0f0;
+    }
   </style>
 </head>
 <body>
   <h1>Laycock’s IG Downloader</h1>
-  <p>Drag the button below into your bookmarks bar ⬇️</p>
+  <p>Drag the button below into your bookmarks bar 📥</p>
 
-  <a class="bookmarklet-button" href="javascript:(function(){var s=document.createElement('script');s.src='https://mattlaycock88.github.io/laycock-bookmarklet/bookmarklet.js';document.body.appendChild(s);})();">
-    🖱 Save Instagram
-  </a>
+  <a class="bookmarklet-button" href="javascript:(function(){var s=document.createElement('script');s.src='https://mattlaycock88.github.io/laycock-bookmarklet/bookmarklet.js';document.body.appendChild(s);})();">💾 Save Instagram Media</a>
 
   <div class="instructions">
-    Then open Instagram and click the button to download.
+    <p>✅ Works on Instagram.com posts or stories.<br>
+    Click the bookmarklet while viewing a post.</p>
+
+    <p>Or copy the code manually:</p>
+    <code>
+      javascript:(function(){var s=document.createElement('script');s.src='https://mattlaycock88.github.io/laycock-bookmarklet/bookmarklet.js';document.body.appendChild(s);})();
+    </code>
   </div>
 </body>
 </html>
