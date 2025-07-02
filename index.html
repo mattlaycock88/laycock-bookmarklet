@@ -1,59 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Laycock Bookmarklet</title>
-  <style>
-    body {
-      background-color: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 100px 20px;
-    }
-    a.bookmarklet-button {
-      display: inline-block;
-      padding: 15px 25px;
-      background-color: #25D366;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-    a.bookmarklet-button:hover {
-      background-color: #1da851;
-    }
-    .instructions {
-      margin-top: 40px;
-      font-size: 16px;
-      color: #aaa;
-    }
-    code {
-      background: #222;
-      padding: 10px;
-      display: block;
-      margin: 20px auto;
-      width: fit-content;
-      color: #0f0;
-    }
-  </style>
-</head>
-<body>
-  <h1>Laycock’s IG Downloader</h1>
-  <p>Drag the button below into your bookmarks bar 📥</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Laycock Save</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  <a class="bookmarklet-button" href="javascript:(function(){var s=document.createElement('script');s.src='https://mattlaycock88.github.io/laycock-bookmarklet/bookmarklet.js';document.body.appendChild(s);})();">💾 Save Instagram Media</a>
+      body {
+        background: radial-gradient(ellipse at top left, #0f0f0f, #000);
+        font-family: 'Sora', sans-serif;
+        color: #e0e0e0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        overflow: hidden;
+        padding: 40px 20px;
+      }
 
-  <div class="instructions">
-    <p>✅ Works on Instagram.com posts or stories.<br>
-    Click the bookmarklet while viewing a post.</p>
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 30px rgba(0, 255, 128, 0.1);
+        border-radius: 16px;
+        padding: 40px 30px;
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+        backdrop-filter: blur(20px);
+        animation: fadeIn 1s ease forwards;
+      }
 
-    <p>Or copy the code manually:</p>
-    <code>
-      javascript:(function(){var s=document.createElement('script');s.src='https://mattlaycock88.github.io/laycock-bookmarklet/bookmarklet.js';document.body.appendChild(s);})();
-    </code>
-  </div>
-</body>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #47fcb3;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-weight: 400;
+        font-size: 1.1rem;
+        color: #ccc;
+        margin-bottom: 30px;
+      }
+
+      .button {
+        background: #47fcb3;
+        color: #000;
+        padding: 14px 28px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin: 16px 0;
+      }
+
+      .button:hover {
+        background: #32c397;
+        transform: scale(1.05);
+      }
+
+      code {
+        display: block;
+        background: #111;
+        color: #6ef2be;
+        padding: 12px;
+        border-radius: 8px;
+        font-family: monospace;
+        margin-top: 10px;
+        font-size: 0.85rem;
+        overflow-x: auto;
+      }
+
+      .footer {
+        font-size: 0.8rem;
+        color: #555;
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      .tip {
+        font-size: 0.9rem;
+        margin-top: 20px;
+        color: #aaa;
+      }
+
+      .neon-glow {
+        color: #47fcb3;
+        text-shadow: 0 0 5px #47fcb3, 0 0 10px #47fcb3, 0 0 20px #47fcb3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glass">
+      <h1 class="neon-glow">Laycock Creative</h1>
+      <h2>Instagram Media Saver</h2>
+      <p>Save any image or video from an Instagram post or story.</p>
+
+      <p class="tip">👉 Drag the button below to your bookmarks bar:</p>
+      <a href="javascript:(()=>{function getCdnUrl(e){const t=new URL(e);return t.host='scontent.cdninstagram.com',t.href}const e=document.querySelector('video')||document.querySelector('img');if(e){const t='VIDEO'===e.tagName?getCdnUrl(e.src):e.src;window.open(t,'_blank')}else alert('Laycock Save: No media found. Open a single Instagram post first.')})();" class="button">💾 Save Instagram Media</a>
+
+      <p class="tip">Or copy the code manually:</p>
+      <code>
+        javascript:(()=>{function getCdnUrl(e){const t=new URL(e);return t.host='scontent.cdninstagram.com',t.href}const e=document.querySelector('video')||document.querySelector('img');if(e){const t='VIDEO'===e.tagName?getCdnUrl(e.src):e.src;window.open(t,'_blank')}else alert('Laycock Save: No media found. Open a single Instagram post first.')})();
+      </code>
+
+      <p class="tip">✅ Works on instagram.com posts or stories.<br>Click the bookmarklet while viewing a post.</p>
+    </div>
+
+    <div class="footer">
+      © 2025 Laycock Creative — built for the creators.
+    </div>
+  </body>
 </html>
